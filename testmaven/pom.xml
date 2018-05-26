@@ -94,6 +94,34 @@
    
     
   </dependencies>
+  
+  <profiles>
+    <profile>
+        <id>integration-tests</id>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <configuration>
+                        <parallel>none</parallel>
+                        <threadCount>1</threadCount>
+                        <disableXmlReport>true</disableXmlReport>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>tracker</id>
+                            <phase>integration-test</phase>
+                            <goals>
+                                <goal>integration-test</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </build>
+    </profile>
+</profiles>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
