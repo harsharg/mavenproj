@@ -3,6 +3,7 @@ package runner;
 import java.util.Map;
 
 import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -14,12 +15,17 @@ public class temp {
 	public void the_data_is_validated() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	  //  throw new PendingException();
+		System.out.println("hardhsh");
 	}
 
 	@Then("^data should populate in system$")
 	public void data_should_populate_in_system() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	//    throw new PendingException();
+		System.out.println("ananan");
+		throw new PendingException();
+		
+		
 	}
 
 	
